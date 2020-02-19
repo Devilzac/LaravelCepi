@@ -10,7 +10,16 @@
         <a class="nav-link" href="#">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Galeria</a>
+        <a class="nav-link" href="{{route('cursos')}}">showCursos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('alumnos')}}">showAlumnos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('profes')}}">showProfes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('notas')}}">showNotas</a>
       </li>
     </ul>
   </div>

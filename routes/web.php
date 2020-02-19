@@ -9,16 +9,27 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*//*
 Route::resource("/post", "FormularioController");
 Route::get("/saludo/{idioma?}","Bienvenido@idioma")->where(["idioma"=>"[a-zA-ZÀ-ÿ-ñ]+"]);
 Route::get("/inicio/{id?}","DatosController@inicio")->where(["id"=>"[0-9]+"]);
 Route::get("/listado/{id?}","DatosController@listado");
 Route::get("/fotos","OtrosController@galeria");
-
+*/
 Route::get('/', function () {
     return view('welcome');
 })->name('inicio');
+
+Route::get("/altaCursos","queryController@altaCursos");
+Route::get("/altaAlumnos","queryController@altaAlumnos");
+Route::get("/altaProfes","queryController@altaProfes");
+Route::get("/altaNotas","queryController@altaNotas");
+
+Route::get("/showCursos","queryController@showCursos")->name('cursos');
+Route::get("/showAlumnos","queryController@showAlumnos")->name('alumnos');
+Route::get("/showProfes","queryController@showProfes")->name('profes');
+Route::get("/showNotas","queryController@showNotas")->name('notas');
+
 /*
 Route::get('/mensaje', function () {
     return 'Practica con rutas laravel';
