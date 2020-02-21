@@ -20,6 +20,21 @@ Route::get('/', function () {
     return view('welcome');
 })->name('inicio');
 
+
+Route::resource("/showCursos","CursoController");
+Route::resource("/showAlumnos","AlumnoController");
+Route::resource("/showProfes","ProfesorController");
+Route::resource("/showNotas","NotaController");
+
+Route::get("/showCursos","CursoController@index")->name('cursos');
+Route::get("/showAlumnos","AlumnoController@index")->name('alumnos');
+Route::get("/showProfes","ProfesorController@index")->name('profes');
+Route::get("/showNotas","NotaController@index")->name('notas');
+/*
+Route::get("/showCursos","CursoController@index")->name('cursos');
+Route::get("/showAlumnos","AlumnoController@index")->name('alumnos');
+Route::get("/showProfes","ProfesorController@index")->name('profes');
+Route::get("/showNotas","NotaController@index")->name('notas');
 Route::get("/altaCursos","queryController@altaCursos");
 Route::get("/altaAlumnos","queryController@altaAlumnos");
 Route::get("/altaProfes","queryController@altaProfes");
@@ -29,7 +44,7 @@ Route::get("/showCursos","queryController@showCursos")->name('cursos');
 Route::get("/showAlumnos","queryController@showAlumnos")->name('alumnos');
 Route::get("/showProfes","queryController@showProfes")->name('profes');
 Route::get("/showNotas","queryController@showNotas")->name('notas');
-
+*/
 /*
 Route::get('/mensaje', function () {
     return 'Practica con rutas laravel';

@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/V:/laragon/www/LaravelCEPI/database/migrations/2020_02_04_190002_create_profes_table.php</file>
-            <file>file:/V:/laragon/www/LaravelCEPI/database/migrations/2020_02_04_185819_create_cursos_table.php</file>
-            <file>file:/V:/laragon/www/LaravelCEPI/database/migrations/2020_02_04_191120_agrega_campos_pruebas.php</file>
-            <file>file:/V:/laragon/www/LaravelCEPI/database/migrations/2020_02_04_190112_create_pruebas_table.php</file>
-            <file>file:/V:/laragon/www/LaravelCEPI/database/migrations/2020_02_04_185917_create_alumnos_table.php</file>
-            <file>file:/V:/laragon/www/LaravelCEPI/.env</file>
-            <file>file:/V:/laragon/www/LaravelCEPI/database/migrations/2020_02_04_190052_create_notas_table.php</file>
-            <file>file:/V:/laragon/www/LaravelCEPI/database/migrations/2020_02_04_191513_modifica_campo_edad.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
