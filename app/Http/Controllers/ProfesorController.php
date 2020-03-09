@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class ProfesorController extends Controller
 {
+    public function onetoone() {
+        $results = Profesor::find(1);
+        $profe = $results;
+
+       $result = $results->curso()->get();
+        return view("mostrarprofesData", compact(["result", "profe"]));
+    }
     /**
      * Display a listing of the resource.
      *

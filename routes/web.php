@@ -9,8 +9,12 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*//*
-Route::resource("/post", "FormularioController");
+*/
+
+Route::get("/form/buscar", function(){
+    return view("buscaralumno");
+})->name("buscar-alumno");
+/*
 Route::get("/saludo/{idioma?}","Bienvenido@idioma")->where(["idioma"=>"[a-zA-ZÀ-ÿ-ñ]+"]);
 Route::get("/inicio/{id?}","DatosController@inicio")->where(["id"=>"[0-9]+"]);
 Route::get("/listado/{id?}","DatosController@listado");
@@ -29,7 +33,16 @@ Route::resource("/showNotas","NotaController");
 Route::get("/showCursos","CursoController@index")->name('cursos');
 Route::get("/showAlumnos","AlumnoController@index")->name('alumnos');
 Route::get("/showProfes","ProfesorController@index")->name('profes');
-Route::get("/showNotas","NotaController@index")->name('notas');
+Route::get("/showNotas","NotaController@index")->name("notas");
+
+
+Route::get("/onetoone","ProfesorController@onetoone");
+Route::get("/cusoAlumnos","AlumnoController@alumnosCurso");
+
+
+Route::post("/form/b", "FormularioController@buscaralumno")->name("buscar");
+Route::resource("/form", "FormularioController");
+
 /*
 Route::get("/showCursos","CursoController@index")->name('cursos');
 Route::get("/showAlumnos","AlumnoController@index")->name('alumnos');

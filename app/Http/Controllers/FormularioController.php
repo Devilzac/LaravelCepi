@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Alumno;
 
 class FormularioController extends Controller
 {
@@ -23,7 +24,7 @@ class FormularioController extends Controller
      */
     public function create()
     {
-        return "create";
+        return view("altasalumnos");
     }
 
     /**
@@ -34,9 +35,21 @@ class FormularioController extends Controller
      */
     public function store(Request $request)
     {
-        return "store";
+        $this->validate($request, [
+            "nombre"=>"required",
+            "apellidos"=>"required",
+            "dni"=>"required|regex:/^[0-9]{8,8}[A-Za-z]$/i",
+            "telefono"=>"required|numeric",
+            "curso_id"=>"required|numeric"
+        ]);
+        $d=Alumno::create($request->all());
+        return redirect()->route("inicio")->with("todook","Alumno añadido correctamente");
     }
 
+    public function buscaralumno (Request $request){
+        $result = Alumno::where("nombre",$request->nombre)->where("apellidos",$request->apellidos)->get();
+        return view("mostraralumno", compact("result"));
+    }
     /**
      * Display the specified resource.
      *
@@ -45,7 +58,8 @@ class FormularioController extends Controller
      */
     public function show($id)
     {
-        return "show";
+        //$result = Alumno::find($id);
+      //  return view("mostraralumno", compact("result"));
     }
 
     /**
@@ -56,7 +70,6 @@ class FormularioController extends Controller
      */
     public function edit($id)
     {
-        return "edit";
     }
 
     /**
@@ -70,7 +83,6 @@ class FormularioController extends Controller
     {
         return "update";
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -79,6 +91,7 @@ class FormularioController extends Controller
      */
     public function destroy($id)
     {
-        return "destroy";
+        Alumno::destroy($id);
+        return redirect()->route('alumnos');
     }
 }

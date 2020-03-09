@@ -5,6 +5,11 @@
 @endsection
 
 @section("main")
+    @if(Session::has('todook'))
+        <div class='alert-info'>
+            {{Session::get('todook')}}
+        </div>                    
+    @endif
     @include("layouts.body")
 @endsection
 

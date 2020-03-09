@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class AlumnoController extends Controller
 {
+   
     /**
      * Display a listing of the resource.
      *
@@ -62,7 +63,7 @@ class AlumnoController extends Controller
      */
     public function edit(Alumno $alumno)
     {
-        //
+        return view("editalumnos", compact("alumno"));
     }
 
     /**

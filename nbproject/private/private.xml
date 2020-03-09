@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/V:/laragon/www/LaravelCEPI/resources/views/altasalumnos.blade.php</file>
+            <file>file:/V:/laragon/www/LaravelCEPI/resources/views/welcome.blade.php</file>
+            <file>file:/V:/laragon/www/LaravelCEPI/resources/views/buscaralumno.blade.php</file>
+            <file>file:/V:/laragon/www/LaravelCEPI/resources/views/layouts/body.blade.php</file>
+            <file>file:/V:/laragon/www/LaravelCEPI/resources/views/layouts/nav.blade.php</file>
+            <file>file:/V:/laragon/www/LaravelCEPI/app/Http/Controllers/FormularioController.php</file>
+            <file>file:/V:/laragon/www/LaravelCEPI/resources/views/mostraralumno.blade.php</file>
+            <file>file:/V:/laragon/www/LaravelCEPI/routes/web.php</file>
+        </group>
     </open-files>
 </project-private>
